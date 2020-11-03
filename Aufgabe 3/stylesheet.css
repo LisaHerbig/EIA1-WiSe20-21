@@ -21,6 +21,11 @@ ul {
 
 li {
     float: right;
+    border-right: 1px solid lightgray;
+}
+
+li:last-child {
+    border-right: none;
 }
 
 li a {
@@ -35,5 +40,18 @@ li a:hover:not(.active) {
     background-color: dimgrey;
 }
 .active {
+    background-color: black;
+}
+
+#link1{
+    color: white;
+    background-color: black;
+}
+#link2 {
+    color: white;
+    background-color: black;
+}
+#link3 {
+    color: white;
     background-color: black;
 }
