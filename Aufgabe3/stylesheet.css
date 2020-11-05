@@ -1,58 +1,173 @@
-
 body {
-    background-image:url(Dreieckblau.png), url(bg.png);
-    background-repeat: no-repeat, repeat; 
-    background-position: center top, center;
-    background-attachment: fixed, scroll;
+    background-image: url(bg.png);
+    background-attachment: fixed;
 }
 
-ul {
+.Kreis {
+    background: darkcyan ;
+    border-radius: 1000px;
+    height: 1600px;
+    width: 1000px;
+    margin-top: -1100px;
+    display: block;
+    margin-left: 250px;
+}
+
+.Kreisinhalt {
+    padding-top: 1100px;
+    padding-left: 50px;
+    color:white;
+}
+
+.Introtext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: left;
+    width: 40%;
+    margin-left: auto;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    padding-right: 110px;
+    padding-top: 1px;
+    padding-bottom: 1000px;
+}
+.Kreisinhalt h1 {
+    font-size: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    line-height: 1px;
+    letter-spacing: -0.1em;
+    padding-left: 150px;
+}
+.Kreisinhalt h2 {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1px;
+    padding-left:  359px;
+}
+.Links ul {
+    position: fixed;
+    top: 0%;
+    right: 100px;
+    background-color: black;
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
-    background-color: darkslategrey;
-    position: fixed;
-    top: 0px;
-    width: 14,5%;
+    border-radius: 5px;
 }
-
-li {
+.Links li {
     float: right;
-    border-right: 1px solid lightgray;
-    border-left: 1px solid lightgray;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    position: center;
 }
-
-li:last-child {
+.Links li:last-child {
     border-right: none;
+    border-left: none;
 }
-
-li a {
+.Links li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding:5px;
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.Links a:hover {
+    color: lightskyblue;
+}
+
+#link1 {
+    color: darkcyan;
+}
+
+#link2 {
+    color: darkcyan;
+}
+
+#link3 {
+    color: darkcyan;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%
+}
+.überschrift {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: darkcyan;
+    margin-left: 380px;
+    margin-top: 100px;
+}
+.überschrift1  {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: darkcyan;
+}
+.Icon {
+    position: absolute;
+    bottom: 190px;
+    left: 665px;
+}
+.Icon:hover {
+    transform: scale(1.5);
+}
+.Logo{
+    position: absolute;
+    top: 1050px;
+
+}
+.Logo:hover {
+    transform: scale(1.5);
+}
+
+.steckbrief {
+    color: darkcyan;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 380px;
+}
+
+.formular {
+    color: darkcyan;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, p, a {
-   text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: lightgray;
+    color: white;
 }
-
-#link1{
-    color: lightskyblue;
-    background-color: darkslategrey;
+#fname {
+        width: auto;
+        height: 30px;
 }
-#link2 {
-    color: lightskyblue;
-    background-color: darkslategrey;
+#lname {
+    width: auto;
+    height: 30px;
 }
-#link3 {
-    color: lightskyblue;
-    background-color:darkslategrey;
+#email {
+    width: auto;
+    height: 30px;
 }
-a:hover {
-    color: lightskyblue;
+#nachricht {
+    width: 30%;
+    height: 50px;
+}
+#absenden {
+    background-color: lightgray;
+    color: white;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
