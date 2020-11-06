@@ -10,7 +10,7 @@ body {
     width: 1000px;
     margin-top: -1100px;
     display: block;
-    margin-left: 250px;
+    margin-left: 18%;
 }
 
 .Kreisinhalt {
@@ -110,8 +110,8 @@ body {
 }
 .Icon {
     position: absolute;
-    bottom: 190px;
-    left: 665px;
+    bottom: 35%;
+    left: 45%;
 }
 .Icon:hover {
     transform: scale(1.5);
