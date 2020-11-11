@@ -34,15 +34,25 @@ body {
     font-weight: bolder;
 }
 
-#blatt {
-    margin-left: 393px;
-    margin-top: 93px;
+.blatt {
+    width: 222px;
+    height: 179px;
+    position: absolute;
+    bottom: 290px;
+    left: -50px;
 }
 
-#pinguin {
-    margin-top: 95px;
-    margin-left: 950px
+.pinguin {
+    width: 144px;
+    height: 193px;
+    position: absolute;
+    left: 488px;
+    bottom: -15px;
+
 }
+
+
+
 
 
 
