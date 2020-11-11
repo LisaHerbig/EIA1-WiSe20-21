@@ -110,8 +110,8 @@ body {
 }
 .Icon {
     position: absolute;
-    bottom: 35%;
-    left: 45%;
+    top: 450px;
+    left: 650px;
 }
 .Icon:hover {
     transform: scale(1.5);
