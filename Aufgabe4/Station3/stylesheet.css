@@ -1,0 +1,59 @@
+body {
+    background-image: url("bg1.png");
+}
+
+.Karte { 
+    background-image: url("wrapperbg.png");
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+    
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 15px;
+   padding: 25px;
+}
+
+#Stern1 {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 450px;
+    top: 150px;
+}
+
+#Stern2 {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 30px;
+    top: 250px;
+}
+
+#Stern3 {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 160px;
+    top: 50x;
+}
+
+#Stern4 {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 350px;
+    top: 260px;
+}
+
+.Stern:hover {
+    content: url("stern_hover.png");
+}
