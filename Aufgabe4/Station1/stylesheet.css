@@ -1,0 +1,51 @@
+body {
+    background-image: url("bg.png");
+    background-attachment: fixed;
+}
+
+.Weihnachstkarte {
+    background-image: url("wrapperbg.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+    z-index: -1;
+
+}
+
+.Weihnachtskarteninhalt {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    padding: 7%;
+    width: 500px;
+    height: 300px;
+
+}
+
+#Ueberschrift {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+#blatt {
+    margin-left: 393px;
+    margin-top: 93px;
+}
+
+#pinguin {
+    margin-top: 95px;
+    margin-left: 950px
+}
+
+
+
+
+
+
