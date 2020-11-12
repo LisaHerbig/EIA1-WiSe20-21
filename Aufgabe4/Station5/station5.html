@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="Karte">
+        <div class="ueberschrift">
+            <h1>Formular</h1>
+        </div>
+    
+        <div class="formular">
+            <form action="/action_page.php">
+                <label for="name">Dein Name</label>
+                <br>
+                <input type="text" id="name" name="fname"> 
+                <br>
+                <br>
+                <label for="nachricht">Deine Nachricht an den Weihnachtsmann</label>
+                <br>
+                <input type="text" id="nachricht" name="nachricht">
+                <br>
+                <div class="Frage">
+                    <p>Willst du ein Geschenk?</p>
+                </div>
+                <div id="radio">
+                    <input type="radio" id="Ja" name="radio">
+                    <label for="Ja">Ja</label>
+                    <input type="radio" id="Nein" name="radio">
+                    <label for="Nein">Nein</label>
+                </div>
+                <br>
+                <br>
+                <div id="submit">
+                <input type="submit" value="abschicken">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

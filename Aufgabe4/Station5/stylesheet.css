@@ -1,0 +1,56 @@
+body {
+    background-image: url("bg.png");
+
+}
+
+.Karte {
+    background-image: url("wrapperbg.png");
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+}
+
+.ueberschrift {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: bolder;
+    position: absolute;
+    left: 45px;
+    top: 30px;
+}
+
+.formular {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    left: 45px;
+    top: 110px;
+    border: none;  
+}
+
+#submit {
+    position: absolute;
+    top: 220px;
+}
+
+
+#nachricht {
+    height: 60px;
+    width: 300px;
+}
+
+.Frage {
+    position: absolute;
+    top: 145px;
+}
+
+#radio {
+    position: absolute;
+    top: 185px;
+}
