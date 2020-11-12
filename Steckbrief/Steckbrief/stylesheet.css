@@ -4,3 +4,12 @@ body {
     font-size: small;
     color: white;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightpink;
+}
