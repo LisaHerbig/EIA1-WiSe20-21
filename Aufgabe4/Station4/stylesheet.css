@@ -43,6 +43,7 @@ body {
     font-family: 'rafelya_carrotinregular';
     font-weight: normal;
     font-style: normal;
+    color: white;
     position: absolute;
     left: 50px;
     top: 40px;
@@ -53,6 +54,7 @@ body {
     font-weight: bolder;
     font-style: normal;
     width: 500px;
+    color: white;
     position: absolute;
     top: 140px;
     left: 50px;
