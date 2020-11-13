@@ -1,0 +1,30 @@
+body {
+    background-image: url("bg.png");
+}
+
+.Weihnachtskarte {
+    background-image: url("wrapperbg.png");
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+}
+
+.video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -252px;
+    margin-top: -142px;
+}
+
+.Schleife {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
