@@ -1,0 +1,66 @@
+body {
+    background-image: url("bg.png");
+}
+
+.Karte {
+    background-image: url("wrapperbg.png");
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+}
+
+.ueberschrift {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 55px;
+    top: 60px;
+}
+
+.text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    width: 400px;
+    left: 55px;
+    top: 165px;
+}
+
+.Schleife {
+    position: absolute;
+    top: 275px;
+    right: 0px;
+}
+
+@keyframes myAnimation {
+    from {top: 0px;}
+    to { top: 360px;}
+}
+.snow1 {
+    position: absolute;
+    left: 100px;
+    width: 25px;
+    height: 25px;
+    animation-name: myAnimation;
+    animation-duration: 7s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+.snow2 {
+    position: absolute;
+    left: 400px;
+    width: 25px;
+    height: 25px;
+    animation-name: myAnimation;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+
+}
