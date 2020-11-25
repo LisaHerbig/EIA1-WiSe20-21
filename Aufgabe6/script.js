@@ -1,7 +1,7 @@
 /* Emissionswerte der Kontinente */
 /*Europa */
 var europe08 = 4965.7;
-var europe18 = 4208.3;
+var europe18 = 4209.3;
 /*North America*/
 var namerica08 = 6600.4;
 var namerica18 = 6035.6;

@@ -2,7 +2,7 @@
 
 /*Europa */
 var europe08 : number = 4965.7;
-var europe18 : number = 4208.3;
+var europe18 : number = 4209.3;
 
 /*North America*/
 var namerica08 : number = 6600.4;
