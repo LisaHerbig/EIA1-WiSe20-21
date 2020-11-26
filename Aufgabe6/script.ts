@@ -30,9 +30,9 @@ var gesamtemission : number = europe18 + namerica18 + samerica18 + africa18 + as
 /*Namen Für Kontinente*/
 
 
-function generalFunction(Koninente:string, acht:number, achtzehn: number )  {
-    document.getElementById ("titleRegion").innerHTML= "continent";
-    document.getElementById ("continentName").innerHTML= "continent";
+function generalFunction(continent:string, acht:number, achtzehn: number )  {
+    document.getElementById ("titleRegion").innerHTML= continent;
+    document.getElementById ("continentName").innerHTML= continent;
     document.getElementById ("head1").innerHTML= achtzehn + " kg CO2";
     document.getElementById ("head2").innerHTML= ((achtzehn/gesamtemission)*100).toFixed(2) + "%";
     document.getElementById ("head3").innerHTML= (((achtzehn/acht)-1)*100).toFixed(2) + "%";

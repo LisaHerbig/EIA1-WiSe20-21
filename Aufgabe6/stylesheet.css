@@ -25,13 +25,13 @@ section {
     height: 100px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    box-shadow: 5px 10px 10px darkgray;
+    box-shadow: 0px 0px 20px darkgray;
 }
 .chartWrapper .chart {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 20%;
+    height: 0%;
     background: white;
     
 }
@@ -40,4 +40,36 @@ footer p {
     margin-top: 50px;
     font-size: 10px;
     opacity: .5;
+}
+
+
+
+.europe:hover {
+    filter: drop-shadow(0px 0px 10px darkgray);
+    transform: scale(1.2);
+}
+
+.northamerica:hover {
+    filter: drop-shadow(0px 0px 20x darkgray);
+    transform: scale(1.2);
+}
+
+.southamerica:hover {
+    filter: drop-shadow(0px 0px 10px darkgray);
+    transform: scale(1.2);
+}
+
+.africa:hover {
+    filter: drop-shadow(0px 0px 10px darkgray);
+    transform: scale(1.2);
+}
+
+.asia:hover {
+    filter: drop-shadow(0px 0px 10px darkgray);
+    transform: scale(1.2);
+}
+
+.australia:hover {
+    filter: drop-shadow(0px 0px 10px darkgray);
+    transform: scale(1.2);
 }

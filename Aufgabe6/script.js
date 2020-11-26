@@ -20,9 +20,9 @@ var australia18 = 2100.5;
 /* Berechnung der Gesamtemission*/
 var gesamtemission = europe18 + namerica18 + samerica18 + africa18 + asia18 + australia18;
 /*Namen Für Kontinente*/
-function generalFunction(Koninente, acht, achtzehn) {
-    document.getElementById("titleRegion").innerHTML = "continent";
-    document.getElementById("continentName").innerHTML = "continent";
+function generalFunction(continent, acht, achtzehn) {
+    document.getElementById("titleRegion").innerHTML = continent;
+    document.getElementById("continentName").innerHTML = continent;
     document.getElementById("head1").innerHTML = achtzehn + " kg CO2";
     document.getElementById("head2").innerHTML = ((achtzehn / gesamtemission) * 100).toFixed(2) + "%";
     document.getElementById("head3").innerHTML = (((achtzehn / acht) - 1) * 100).toFixed(2) + "%";
