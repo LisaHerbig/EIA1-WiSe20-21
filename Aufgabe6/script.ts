@@ -67,5 +67,5 @@ document.querySelector(".asia").addEventListener('click', function() {
 
 /*Funktion und Event Australien*/
 document.querySelector(".australia").addEventListener('click', function(){
-    generalFunction ("Australien", australia08, australia18);
+    generalFunction ("Australia", australia08, australia18);
 })
