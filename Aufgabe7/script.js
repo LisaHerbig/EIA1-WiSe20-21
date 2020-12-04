@@ -1,4 +1,3 @@
-/* Erster Aufgabenteil*/
 /* Array mit mehreren Funktionsblöcken*/
 var Sounds = [
     new Audio('music/A.mp3'),
@@ -11,6 +10,7 @@ var Sounds = [
     new Audio('music/laugh-2.mp3'),
     new Audio('music/snare.mp3'),
 ];
+/* Erster Aufgabenteil*/
 /* Funktion*/
 function playSample(soundName) {
     soundName.play();
