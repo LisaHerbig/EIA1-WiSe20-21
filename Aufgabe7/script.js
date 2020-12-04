@@ -45,11 +45,12 @@ document.querySelector('#box9').addEventListener('click', function () {
 });
 /*Zweiter Aufgabenteil*/
 /*Funktion für den Beat*/
+var sequence = [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8];
+var indexOfSequence = 0;
 function playBeat() {
     setInterval(function () {
-        playSample(Sounds[5]);
-        playSample(Sounds[8]);
-        playSample(Sounds[4]);
+        playSample(Sounds[sequence[indexOfSequence]]);
+        indexOfSequence = indexOfSequence + 1;
     }, 500);
 }
 /*Aufruf und EventListener*/
