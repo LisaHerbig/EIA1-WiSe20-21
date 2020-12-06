@@ -2,7 +2,7 @@
 
 /* Array mit mehreren Funktionsblöcken*/
 
-var Sounds :HTMLAudioElement []=
+let Sounds :HTMLAudioElement []=
 [
    new Audio('music/A.mp3'),
    new Audio('music/C.mp3'),
@@ -64,8 +64,8 @@ document.querySelector('#box9').addEventListener('click', function(){
 
 /*Funktion für den Beat*/
 
-var sequence: number []= [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8];
-var indexOfSequence: number =0;
+let sequence: number []= [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8];
+let indexOfSequence: number =0;
 
 function playBeat(){
 setInterval(function () {
