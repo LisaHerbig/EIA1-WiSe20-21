@@ -170,11 +170,78 @@ namespace Aufgabe8 {
 
     document.getElementById("deleteBtn").addEventListener("click", function (): void {
         sequence = [];
-        sequence = safeSequence;
+        /*das Könnte man nutzen um den Beat weiterhin abspielen zu lassen und nur die neuen Samples zu löschen : sequence = safeSequence; */
         
         
         
     });
+
+    /*Bedienung mit der Tastatur*/
+
+    /*switch case für die Tastenbedienung*/
+    
+    document.addEventListener("keydown", (event) => {
+        const keyName: string = event.key;
+        switch (keyName) {
+        case "a":
+            playSample (SOUNDS[0]);
+            record(0);
+            break;
+        case "b":
+            playSample (SOUNDS[1]);
+            record(1);
+            break;
+        case "c":
+            playSample (SOUNDS[2]);
+            record(2);
+            break;
+        case "d":
+            playSample (SOUNDS[3]);
+            record(3);
+            break;
+        case "e":
+            playSample (SOUNDS[4]);
+            record(4);
+            break;
+        case "f":
+            playSample (SOUNDS[5]);
+            record(5);
+            break;
+        case "g":
+            playSample (SOUNDS[6]);
+            record(6);
+            break;
+        case "h":
+            playSample (SOUNDS[7]);
+            record(7);
+            break;
+        case "i":
+            playSample (SOUNDS[8]);
+            record(8);
+            break;
+        case "r":
+            recorder = true;
+            break;
+        case "p":
+            playBeat();
+            runFlag = 1;
+            break;
+        case "s":
+            runFlag = 0;
+            clearInterval (beatInterval);
+            break;
+        case "l":
+            sequence = [];
+            break;
+            default:
+            console.log("wrong key");
+        }   
+    });
+    
+        
+  
+    
+    
 
 
 }
