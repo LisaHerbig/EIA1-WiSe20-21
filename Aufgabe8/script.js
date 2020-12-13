@@ -54,13 +54,16 @@ var Aufgabe8;
         soundName.play();
     }
     /*Array für den Beat*/
-    var sequence = [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8, 4];
+    var safeSequence = [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8, 4];
+    var sequenceoriginal = [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8, 4];
+    var sequence = sequenceoriginal;
     var indexOfSequence = 0;
-    /*Flag für Stop und Start*/
+    /*Bedingung für Stop und Start*/
     var runFlag = 1;
+    var beatInterval;
     /*Funktion für den Beat mit Loop*/
     function playBeat() {
-        setInterval(function () {
+        beatInterval = setInterval(function () {
             if (indexOfSequence < sequence.length && runFlag == 1) {
                 playSample(SOUNDS[sequence[indexOfSequence]]);
                 indexOfSequence = indexOfSequence + 1;
@@ -73,6 +76,7 @@ var Aufgabe8;
     /*Aufruf und EventListener Stop*/
     document.querySelector("#stopBtn").addEventListener("click", function () {
         runFlag = 0;
+        clearInterval(beatInterval);
     });
     /*Aufruf und EventListener Start*/
     document.querySelector("#playBtn").addEventListener("click", function () {
@@ -84,9 +88,9 @@ var Aufgabe8;
     var play = document.getElementById("playBtn");
     var stop = document.getElementById("stopBtn");
     /*Funktion für das Wechseln der Klassen*/
-    function toggleButtons(playButton, stopButton) {
-        playButton.classList.add("hideIt");
-        stopButton.classList.remove("hideIt");
+    function toggleButtons(hideButton, showButton) {
+        hideButton.classList.add("hideIt");
+        showButton.classList.remove("hideIt");
     }
     /*Aufruf der Funktion für das Wechseln der Klassen*/
     play.addEventListener("click", function () {
@@ -96,15 +100,18 @@ var Aufgabe8;
         toggleButtons(stop, play);
     });
     /*RecordButton*/
+    var recorder = false;
     function record(mynum) {
-        sequence.push(mynum);
+        if (recorder == true)
+            sequence.push(mynum);
     }
     document.getElementById("recordBtn").addEventListener("click", function () {
-        sequence.push();
+        recorder = true;
     });
-    /*DeleteButton*/
+    /*DeleteButton Initit. Sequence*/
     document.getElementById("deleteBtn").addEventListener("click", function () {
-        sequence.pop();
+        sequence = [];
+        sequence = safeSequence;
     });
 })(Aufgabe8 || (Aufgabe8 = {}));
 //# sourceMappingURL=script.js.map

@@ -1,4 +1,3 @@
-
 namespace Aufgabe8 {
     /* Array mit mehreren Funktionsblöcken*/
 
@@ -72,19 +71,24 @@ namespace Aufgabe8 {
 
 
     /*Array für den Beat*/
+    let safeSequence: number [] = [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8, 4];
 
-    let sequence: number[] = [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8, 4];
+    let sequenceoriginal: number [] = [4, 5, 8, 8, 4, 8, 4, 4, 5, 8, 5, 5, 8, 4, 5, 8, 4];
+    let sequence: number[] = sequenceoriginal;
+    
     let indexOfSequence: number = 0;
 
+    
 
-    /*Flag für Stop und Start*/
+    /*Bedingung für Stop und Start*/
 
     let runFlag: number = 1;
     
+    let beatInterval: number;
     /*Funktion für den Beat mit Loop*/
 
     function playBeat(): void {
-        setInterval(function (): void {
+        beatInterval = setInterval(function (): void {
             if (indexOfSequence < sequence.length &&  runFlag == 1) {
 
                 playSample(SOUNDS[sequence[indexOfSequence]]);
@@ -94,13 +98,14 @@ namespace Aufgabe8 {
 
                 indexOfSequence = 0;
             }
-        },          500);
+        },                         500);
     }
+
 
 /*Aufruf und EventListener Stop*/
 
     document.querySelector("#stopBtn").addEventListener("click", function (): void {
-        runFlag = 0;
+        runFlag = 0; clearInterval (beatInterval);
 
     });
 
@@ -110,6 +115,7 @@ namespace Aufgabe8 {
     document.querySelector("#playBtn").addEventListener("click", function (): void {
         playBeat();
         runFlag = 1;
+        
     });
 
 
@@ -122,9 +128,9 @@ namespace Aufgabe8 {
 
     /*Funktion für das Wechseln der Klassen*/
 
-    function toggleButtons(playButton: HTMLElement, stopButton: HTMLElement): void {
-        playButton.classList.add("hideIt");
-        stopButton.classList.remove("hideIt");
+    function toggleButtons(hideButton: HTMLElement, showButton: HTMLElement): void {
+        hideButton.classList.add("hideIt");
+        showButton.classList.remove("hideIt");
     }
 
 
@@ -136,20 +142,23 @@ namespace Aufgabe8 {
 
     stop.addEventListener("click", function (): void {
         toggleButtons(stop, play);
+        
     });
 
 
 
 
     /*RecordButton*/
-
+    let recorder: boolean = false;
     
     function record (mynum: number): void {
+        if (recorder == true)
         sequence.push(mynum);
+    
     }
 
     document.getElementById("recordBtn").addEventListener ("click", function(): void {
-        sequence.push();
+        recorder = true;
     });
 
     
@@ -157,12 +166,15 @@ namespace Aufgabe8 {
     
     
 
-    /*DeleteButton*/
+    /*DeleteButton Initit. Sequence*/
 
     document.getElementById("deleteBtn").addEventListener("click", function (): void {
-        sequence.pop();
+        sequence = [];
+        sequence = safeSequence;
+        
+        
+        
     });
-
 
 
 }

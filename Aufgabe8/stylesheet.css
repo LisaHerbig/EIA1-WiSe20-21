@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+    background-image: url("image/bg.png");
 }
 
 .box {
@@ -14,7 +14,7 @@ body {
 
 
 #box1 {
-    background: radial-gradient(#4f72d1, #0044ff);
+    background: radial-gradient(#fca83b, #ff7300);
     width: 150px;
     height: 150px;
     border-radius: 20px;  
@@ -25,7 +25,7 @@ body {
 
 
 #box2 {
-    background: radial-gradient(#4f72d1, #0044ff);
+    background: radial-gradient(#fca83b, #ff7300);
     width: 150px;
     height: 150px;
     border-radius: 20px;  
@@ -36,7 +36,7 @@ body {
 }
 
 #box3 {
-    background: radial-gradient(#4f72d1, #0044ff);;
+    background: radial-gradient(#fca83b, #ff7300);;
     width: 150px;
     height: 150px;
     border-radius: 20px;  
@@ -89,7 +89,7 @@ body {
 }
 
 #box8 {
-    background:radial-gradient(#ffd752, #ffc400);
+    background:radial-gradient(#ee2222, #b90000);
     width: 150px;
     height: 150px;
     border-radius: 20px;  
@@ -100,7 +100,7 @@ body {
 }
 
 #box9 {
-    background:radial-gradient(#ffd752, #ffc400);
+    background:radial-gradient(#ee2222, #b90000);
     width: 150px;
     height: 150px;
     border-radius: 20px;
@@ -120,7 +120,7 @@ body {
 }
 
 #box1:active, #box2:active, #box3:active{
-    background: radial-gradient(#7a8ec4, #4577ff);
+    background: radial-gradient(#f3ab4ee1, #ff8827dc);
 }
 
 #box4:active, #box5:active, #box6:active, #box7:active{
@@ -128,12 +128,10 @@ body {
 }
 
 #box8:active, #box9:active{
-    background:radial-gradient(#ffe284, #ffd341);
+    background:radial-gradient(#f05656e1, #af1b1b);
 }
 
-#playBtn:hover {
-filter: drop-shadow(0px 0px 10px#b9b4b4);
-}
+
 
 .wrapper {
     position: absolute;
@@ -143,27 +141,43 @@ filter: drop-shadow(0px 0px 10px#b9b4b4);
 }
 
 #playBtn {
-    color: #ffffff !important;
+    color: #000000 !important;
     font-size: 350%;
 
 }
 
+#playBtn:hover {
+    filter: drop-shadow(0px 0px 10px#d39115);
+    }
+
 #stopBtn {
-    color: #ffffff !important;
+    color: #000000 !important;
     font-size: 350%;
    
 }
 
+#stopBtn:hover {
+    filter: drop-shadow(0px 0px 10px#d39115);
+    }
+
 #deleteBtn {
-    color: #ffffff !important;
+    color: #000000 !important;
     font-size: 350%;
     
 }
 
+#deleteBtn:hover {
+    filter: drop-shadow(0px 0px 10px#d39115);
+    }
+
 #recordBtn {
-    color: #ffffff !important;
+    color: #000000 !important;
     font-size: 350%;
 }
+
+#recordBtn:hover {
+    filter: drop-shadow(0px 0px 10px#d39115);
+    }
 
 .hideIt {
     display: none !important;
