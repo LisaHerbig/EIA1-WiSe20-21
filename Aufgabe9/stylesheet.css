@@ -1,0 +1,92 @@
+body {
+    background-image: url(bg.jpg);
+    opacity: 0.85;
+}
+
+.ueberschrift {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 170%;
+    font-weight: lighter;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate( -50%);
+}
+
+.addtask {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, 0%);
+   
+    
+}
+
+#boxAddTask {
+padding: 10px;
+background-color: #ffffff;
+font-family: 'Courier New', Courier, monospace;
+font-size: 20px;
+}
+
+#ToDoList {
+    width: 450px;
+    height: 200px;
+    padding: 0%;
+    margin: 0%;
+    list-style-type: none;
+    }
+
+li {
+    border: 1px solid #555555;
+    background-color: #ffffff;
+    margin: 2%;
+    padding: 3%;
+    font-size: 100%;
+    width: 450px;
+    height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #000000;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    list-style-type: none;
+
+    
+}
+.myInput {
+    position: absolute;
+    left: 52%;
+    top: 23%;
+    transform:  translate(-52%, 0%);
+    border: 1px solid #555555;
+    background-color: #ffffff;
+    padding: 1%;
+    margin: 0%;
+    font-size: 100%;
+    width: 450px !important;
+    height: 20px !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #000000;
+}
+
+#text {
+    margin: 10%;
+}
+
+#deleteMe {
+    color: #413f3f;
+    font-size: 100%;
+}
+
+#checkdiv {
+    position: absolute;
+    margin: 2%;
+    top: 40%;
+    left: 0%;
+    
+   
+}
+
