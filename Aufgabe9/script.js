@@ -20,15 +20,15 @@ function pushTask() {
         var myInputElement = document.querySelector(".myInput");
         var inputValue = myInputElement.value;
         newTask.innerHTML = inputValue;
-        //Div in das alles hineinkommt/
-        var checkDiv = document.createElement("div");
-        checkDiv.setAttribute("id", "checkdiv");
-        newTask.appendChild(checkDiv);
+        //Div für die Checkbox/
+        // let checkDiv: HTMLElement = document.createElement("div");
+        //checkDiv.setAttribute("id", "checkdiv");
+        //newTask.appendChild(checkDiv);
         //checkbox soll zu meinem ListenElement hinzugefügt werden/
         var checkBox = document.createElement("input");
         checkBox.setAttribute("type", "checkbox");
         checkBox.setAttribute("id", "check");
-        checkDiv.appendChild(checkBox);
+        newTask.appendChild(checkBox);
         //DeleteButton soll hinzugefügt werden/
         var deleteBtn = document.createElement("i");
         deleteBtn.setAttribute("class", "fas fa-trash-alt");
@@ -53,9 +53,9 @@ document.getElementById("myBtn").addEventListener("click", function () {
     countOpenTasks();
 });
 // DeleteButton
-document.getElementById("deleteMe").addEventListener("click", function () {
+var deleteButton = document.getElementById("deleteMe");
+deleteButton.addEventListener("click", function () {
     var löschen = document.getElementById("taskdiv");
     löschen.remove();
 });
-/*anders zählen, bzw. Selektion anpassen, Papa fragen..., alles in divs packen damit alles schön zusammen ist (checkbox, deletebutton, liste,...*/ 
 //# sourceMappingURL=script.js.map

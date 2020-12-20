@@ -18,7 +18,7 @@ function pushTask (): void {
          
          
         //Neues ListenElement/
-         let newTask: HTMLElement = document.createElement("li");
+         let newTask: HTMLLIElement = document.createElement("li");
          newTask.setAttribute ("id", "newListElmt");
          taskDiv.appendChild(newTask);
 
@@ -27,16 +27,16 @@ function pushTask (): void {
          let inputValue: string = myInputElement.value;
          newTask.innerHTML = inputValue;
     
-         //Div in das alles hineinkommt/
-         let checkDiv: HTMLElement = document.createElement("div");
-         checkDiv.setAttribute("id", "checkdiv");
-         newTask.appendChild(checkDiv);
+         //Div für die Checkbox/
+        // let checkDiv: HTMLElement = document.createElement("div");
+         //checkDiv.setAttribute("id", "checkdiv");
+         //newTask.appendChild(checkDiv);
 
         //checkbox soll zu meinem ListenElement hinzugefügt werden/
-         let checkBox: HTMLElement = document.createElement("input");
+         let checkBox: HTMLInputElement = document.createElement("input");
          checkBox.setAttribute("type", "checkbox");
          checkBox.setAttribute("id", "check");
-         checkDiv.appendChild(checkBox);
+         newTask.appendChild(checkBox);
 
         //DeleteButton soll hinzugefügt werden/
          let deleteBtn: HTMLElement = document.createElement("i");
@@ -49,7 +49,6 @@ function pushTask (): void {
              deleteTask(taskDiv);
          });
         }
-       
     }
 
 //Funkion für das Löschen des Tasks
@@ -64,13 +63,13 @@ document.getElementById ("myBtn").addEventListener("click", function (): void {
     pushTask();
     openTasks ++;
     countOpenTasks();
-   
-    
-    
 });
 
+
+
 // DeleteButton
-document.getElementById ("deleteMe").addEventListener("click", function(): void {
+let deleteButton: HTMLElement = document.getElementById("deleteMe");
+deleteButton.addEventListener("click", function(): void {
     let löschen: HTMLElement = document.getElementById("taskdiv");
     löschen.remove();
 });
@@ -79,4 +78,5 @@ document.getElementById ("deleteMe").addEventListener("click", function(): void 
 
 
 
-/*anders zählen, bzw. Selektion anpassen, Papa fragen..., alles in divs packen damit alles schön zusammen ist (checkbox, deletebutton, liste,...*/
+
+

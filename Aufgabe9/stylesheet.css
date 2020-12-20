@@ -72,8 +72,8 @@ li {
     color: #000000;
 }
 
-#text {
-    margin: 10%;
+#check {
+  left: 0%;
 }
 
 #deleteMe {
@@ -81,12 +81,19 @@ li {
     font-size: 100%;
 }
 
-#checkdiv {
+/*#checkdiv {
+    position: relative;
+    padding: 0%;
+    width: 10px;
+    height: 10px; 
+}*/
+
+#myBtn {
     position: absolute;
-    margin: 2%;
-    top: 40%;
-    left: 0%;
-    
-   
+    left: 68%;
+    bottom: 70%;
+    width: 70px;
+    height: 54px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
