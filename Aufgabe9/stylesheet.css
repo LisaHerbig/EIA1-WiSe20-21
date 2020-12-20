@@ -97,3 +97,8 @@ li {
     font-family: 'Courier New', Courier, monospace;
 }
 
+#openTasks {
+    position: absolute;
+    top: 35%;
+    font-family: 'Courier New', Courier, monospace;
+}
