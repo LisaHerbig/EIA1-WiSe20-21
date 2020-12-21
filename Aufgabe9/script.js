@@ -16,10 +16,12 @@ function pushTask() {
         var newTask = document.createElement("li");
         newTask.setAttribute("id", "newListElmt");
         taskDiv_1.appendChild(newTask);
-        //in der Liste soll der Input des Feldes stehen/
+        //Variablen für den Inhalt des eingegebenen Textfeldes
         var myInputElement = document.querySelector(".myInput");
         var inputValue = myInputElement.value;
+        //in der Liste soll der Input des Feldes stehen/
         newTask.innerHTML = inputValue;
+        myInputElement.value = "";
         //Div für die Checkbox/
         // let checkDiv: HTMLElement = document.createElement("div");
         //checkDiv.setAttribute("id", "checkdiv");

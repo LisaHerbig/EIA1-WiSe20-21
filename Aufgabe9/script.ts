@@ -7,6 +7,7 @@ function countOpenTasks (): void {
 }
 
 
+         
 //Funktion, die, wenn der Input nicht leer ist, dem Objekt ein Array hinzufügt/
 function pushTask (): void {
      {
@@ -22,10 +23,14 @@ function pushTask (): void {
          newTask.setAttribute ("id", "newListElmt");
          taskDiv.appendChild(newTask);
 
-        //in der Liste soll der Input des Feldes stehen/
+         //Variablen für den Inhalt des eingegebenen Textfeldes
          let myInputElement: HTMLInputElement = document.querySelector(".myInput");
          let inputValue: string = myInputElement.value;
+
+        //in der Liste soll der Input des Feldes stehen/
          newTask.innerHTML = inputValue;
+         myInputElement.value = "";
+         
     
          //Div für die Checkbox/
         // let checkDiv: HTMLElement = document.createElement("div");
@@ -48,7 +53,9 @@ function pushTask (): void {
          deleteBtn.addEventListener("click", function(): void {
              deleteTask(taskDiv);
          });
+         
         }
+    
     }
 
 //Funkion für das Löschen des Tasks
