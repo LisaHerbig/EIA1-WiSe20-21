@@ -1,32 +1,39 @@
 var Aufgabe11;
 (function (Aufgabe11) {
-    /*
-    Erstellen eines Objektes
-    */
     var todoObject = [
-        {
-            title: "EIA fertig machen",
-            done: false
-        },
-        {
-            title: "Tee trinken",
-            done: true
-        }
+    //{
+    // title: "EIA fertig machen",
+    //  done: false
+    //  },
+    // {
+    //  title: "Tee trinken",
+    // done : true
+    // }
     ];
-    /* Variablen deklariert, die später die entsprechenden DOM-Elemente
-    * speichern.
+    /*
+    var todosText: string[] =       ["Lorem" , "Ipsum" , "Dolor"];
+    var todosChecked: boolean[] =    [true    , false   , false];
     */
+    /**
+     * Die Anwendung wird immer wieder auf die selben
+     * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht
+     * jedes mal neu selektiert werden müssen, werden hier
+     * Variablen deklariert, die später die entsprechenden DOM-Elemente
+     * speichern.
+     */
     var inputDOMElement;
     var addButtonDOMElement;
     var todosDOMElement;
     var counterDOMElement;
+    var countDone;
+    var countToDo;
     /**
      * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
      * initialisiert werden
      */
     window.addEventListener("load", function () {
-        /*
-         * wichtigsten Elemente
+        /**
+         * Jetzt da der DOM verfügbar ist können die wichtigsten Elemente
          * in ihre Variablen gespeichert werden, um später auf sie
          * zugreifen zu können
          */
@@ -34,34 +41,41 @@ var Aufgabe11;
         addButtonDOMElement = document.querySelector("#addButton");
         todosDOMElement = document.querySelector("#todos");
         counterDOMElement = document.querySelector("#counter");
-        var index = 0;
+        countDone = document.querySelector("#Done");
+        countToDo = document.querySelector("#zuTun");
         /**
          * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
          * auf den AddToDo Button gesetzt werden.
          */
-        addButtonDOMElement.addEventListener("click", function () {
-            addTodo();
-            zaehler_aktualisieren(index);
-        });
+        addButtonDOMElement.addEventListener("click", addTodo);
         /**
          * Initial soll einmal die Liste an bereits definierten ToDos
          * aus den Arrays in den DOM gezeichnet werden.
          */
         drawListToDOM();
     });
+    /*Variablen zum Zählen*/
+    var zaehleDone = 0;
+    var zaehleToDo = 0;
     function drawListToDOM() {
         // alle todos erst einmal aus dem DOM löschen
         todosDOMElement.innerHTML = "";
         var _loop_1 = function (index) {
             /**
-             * Neues DIV-Element erstellen
+             * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen,
+             * die Objekt-Instansierung ist aber übersichtlicher)
              */
             var todo = document.createElement("div");
             todo.classList.add("todo");
-            /*
+            /**
+             * Jedes Todo besteht aus etwas Markup, also aus HTML-Elementen
+             * wie der Check-Anzeige, dem ToDo-Text und dem Mülleimer
+             *
              * Einfachheitshalber werden hier alle HTML-Elemente für ein ToDo
-             *  als eine lange
-             * HTML-Zeichenkette erstellt.
+             * nicht DOM-Objekt-weise (wie oben, mit createElement), sondern als eine lange
+             * HTML-Zeichenkette erstellt. An manchen Stellen der Zeichenkette wird
+             * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
+             * hier muss die Zeichenkette unterbrochen werden.
              */
             todo.innerHTML = "<span class='check " + todoObject[index].done + "'><i class='fas fa-check'></i></span>"
                 + todoObject[index].title +
@@ -71,13 +85,11 @@ var Aufgabe11;
                 // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
                 // übergeben, damit an der entsprechenden Stelle im Array der Wert geändert werden kann.
                 toggleCheckState(index);
-                zaehler_aktualisieren(index);
             });
             todo.querySelector(".trash").addEventListener("click", function () {
                 // hier wird der Index, also die aktuelle Stelle im Array dieses ToDos,
                 // übergeben, damit die entsprechende Stelle im Array gelöscht werden kann.
                 bei_loeschen(index);
-                //deleteTodo(index);
             });
             // Bis hier hin wurde das neue Todo "zusammengebaut", jetzt wird es in den DOM gerendert.
             todosDOMElement.appendChild(todo);
@@ -90,11 +102,14 @@ var Aufgabe11;
     }
     function updateCounter() {
         counterDOMElement.innerHTML = todoObject.length + " in total";
+        countToDo.innerHTML = zaehleToDo + " To Do";
+        countDone.innerHTML = zaehleDone + " Done";
     }
     /**
      * Ein neues ToDo wird folgendermaßen erstellt:
      */
     function addTodo() {
+        zaehleToDo++;
         /**
          * Zunächst wird geprüft, ob das Input-Feld nicht leer ist
          * (ansonsten würde ein leerer ToDo-Text erstellt werden,
@@ -140,7 +155,17 @@ var Aufgabe11;
          * Kurs behandelt wurden) nutzen.
          */
         todoObject[index].done = !todoObject[index].done;
-        console.log(todoObject[index].done);
+        doneHandling();
+        function doneHandling() {
+            if (todoObject[index].done == true) {
+                zaehleDone++;
+                zaehleToDo--;
+            }
+            else {
+                zaehleToDo++;
+                zaehleDone--;
+            }
+        }
         /**
          * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
          * wird wieder getriggert
@@ -150,6 +175,15 @@ var Aufgabe11;
     /**
      * Diese Funktion löscht ein ToDo
      */
+    function bei_loeschen(index) {
+        if (todoObject[index].done == true) {
+            zaehleDone--;
+            deleteTodo(index);
+        }
+        else {
+            alert("Diese Aufgabe ist noch nicht erledigt!");
+        }
+    }
     function deleteTodo(index) {
         /**
          * Durch "index" ist die entsprechende Stelle im Array
@@ -163,43 +197,40 @@ var Aufgabe11;
          * wird wieder getriggert
          */
         drawListToDOM();
-        /*
-        Zähler neutralisieren
-        */
     }
-    /*
-    Deklaration der Zählervariablen für ToDo, Open und Done*/
-    var zaehlerDone = 0;
-    var zaehlerTodo = 0;
-    //let index: number = 0;
-    /*
-       Zählerfunktion erweitern,  wird überprüft, ob der Wert von "done"
-       wahr oder falsch ist. Ist der Wert wahr, wird die Variable ZaehlerDone
-       um eins erhöht. Ist der wert != wahr, wird der zaehlerToDo um eins erhöht.
-    */
-    function zaehler_aktualisieren(index) {
-        if (todoObject[index].done != false) {
-            zaehlerDone++;
-            zaehlerTodo--;
-            console.log("hihi");
+    window.addEventListener("load", function () {
+        var artyom = new Artyom();
+        artyom.addCommands({
+            indexes: ["erstelle Aufgabe *", "neue Aufgabe *"],
+            smart: true,
+            action: function (i, wildcard) {
+                console.log("Neue Aufgabe wird erstellt: " + wildcard);
+                todoObject.unshift({
+                    title: wildcard,
+                    done: false
+                });
+                zaehleToDo++;
+                drawListToDOM();
+            }
+        });
+        function startContinuousArtyom() {
+            artyom.fatality();
+            setTimeout(function () {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function () {
+                    console.log("Ready!");
+                });
+            }, 250);
         }
-        else {
-            zaehlerTodo++;
-            console.log("fne");
-        }
-        console.log(zaehlerDone);
-        console.log(zaehlerTodo);
-    }
-    function bei_loeschen(index) {
-        if (todoObject[index].done == true) {
-            zaehlerDone--;
-            deleteTodo(index);
-        }
-        else {
-            alert("Diese Aufgabe ist noch nicht erledigt!");
-        }
-    }
-    document.getElementById("zuTun").innerHTML = zaehlerTodo + "ToDo";
-    document.getElementById("Done").innerHTML = zaehlerDone + " fertig";
+        startContinuousArtyom();
+        document.querySelector("#UlliStart").addEventListener("click", function () {
+            artyom.say("Hallo ich bin Ulli, Wie kann ich helfen? Wenn ich eine neue Aufgabe erstellen soll sage neue Aufgabe  oder erstelle Aufgabe ");
+        });
+    });
 })(Aufgabe11 || (Aufgabe11 = {}));
 //# sourceMappingURL=script.js.map

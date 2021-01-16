@@ -13,6 +13,13 @@ main {
     color: grey;
 }
 
+#zuTun {
+    color:grey;
+}
+#Done {
+    color: grey;
+}
+
 .inputGroup {
     position: relative;
 }
@@ -84,4 +91,11 @@ main {
 
 .trash:hover {
     color: black;
+}
+
+#UlliStart {
+   color: grey;
+   border: none;
+   padding: 2%;
+   margin: 2%;
 }
