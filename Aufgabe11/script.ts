@@ -292,7 +292,7 @@ window.addEventListener("load", function(): void {
     startContinuousArtyom();
 
     document.querySelector("#UlliStart").addEventListener ("click", function(): void {
-        artyom.say("Hallo ich bin Ulli, Wie kann ich helfen? Wenn ich eine neue Aufgabe erstellen soll sage neue Aufgabe  oder erstelle Aufgabe ");
+        artyom.say("Hallo ich bin Ulli, Wenn ich eine neue Aufgabe erstellen soll sage neue Aufgabe  oder erstelle Aufgabe ");
     });
    
 });

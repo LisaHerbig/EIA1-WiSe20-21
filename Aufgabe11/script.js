@@ -229,7 +229,7 @@ var Aufgabe11;
         }
         startContinuousArtyom();
         document.querySelector("#UlliStart").addEventListener("click", function () {
-            artyom.say("Hallo ich bin Ulli, Wie kann ich helfen? Wenn ich eine neue Aufgabe erstellen soll sage neue Aufgabe  oder erstelle Aufgabe ");
+            artyom.say("Hallo ich bin Ulli, Wenn ich eine neue Aufgabe erstellen soll sage neue Aufgabe  oder erstelle Aufgabe ");
         });
     });
 })(Aufgabe11 || (Aufgabe11 = {}));
